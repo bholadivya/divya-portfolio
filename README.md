@@ -3,7 +3,7 @@
 ## 🔗 Links
 
 - 🌐 **Live Demo:** https://your-portfolio-link.vercel.app  
-- 💻 **GitHub Repo:** https://github.com/your-username/portfolio  
+- 💻 **GitHub Repo:** https://github.com/bholadivya/divya-portfolio.git
 
 ---
 
@@ -58,7 +58,7 @@ The portfolio is designed with a focus on **clean UI, responsiveness, and user e
 ## ⚙️ Installation
 
 ```bash
-git clone [https://github.com/your-username/portfolio.git](https://github.com/bholadivya/divya-portfolio.git)
+git clone (https://github.com/bholadivya/divya-portfolio.git)
 npm install
 npm run dev
 ```
