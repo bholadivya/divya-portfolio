@@ -1,16 +1,39 @@
-# React + Vite
+# 🌐 Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 About
 
-Currently, two official plugins are available:
+This is my personal portfolio built using React and Tailwind CSS, showcasing my projects, skills, and experience as a frontend-focused full stack developer.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+* Responsive design
+* Dark mode toggle
+* Animated UI (stars background, transitions)
+* Project showcase
+* Skills filtering system
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+* React (Vite)
+* Tailwind CSS
+* JavaScript
+* Lucide Icons
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Preview
+
+(Add screenshots here)
+
+## 🔗 Live Website
+
+(Add deployed link later)
+
+## 📂 Setup
+
+```bash
+npm install
+npm run dev
+```
+
+## 👨‍💻 Author
+
+Divya Bhola
