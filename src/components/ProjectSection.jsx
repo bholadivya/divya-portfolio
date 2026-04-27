@@ -6,9 +6,9 @@ const Projects = [
     title: "ERP Portal for ECE Department",
     description:
       "A full-stack ERP system with role-based dashboards for students, professors, and admins. Features authentication, workflow management, and AI-powered chatbot integration.",
-    image: "/Projects/project1.png",
+    image: "/Projects/ERP.png",
     tags: ["React", "Tailwind", "Node.js", "MongoDB", "JWT"],
-    demoUrl: "#",
+    demoUrl: "https://btp-project-kohl.vercel.app/login",
     githubUrl: "https://github.com/btpmanagement123-hash/btp-project.git",
   },
   {
@@ -26,7 +26,7 @@ const Projects = [
     title: "AI-Powered Support Ticket Triage System",
     description:
       "Built a full-stack MERN application that classifies support tickets using rule-based NLP into categories like Billing, Technical, and Account, and assigns priorities (P0–P3) based on urgency. Implemented a custom security rule to escalate critical issues and stored ticket history using MongoDB.",
-    image: "https://via.placeholder.com/400x300",
+    image: "/Projects/ai-ticket-triage.png",
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "JavaScript"],
     demoUrl: "#",
     githubUrl: "https://github.com/bholadivya/AI-Ticket-Triage.git",
