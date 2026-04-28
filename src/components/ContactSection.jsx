@@ -1,49 +1,73 @@
 /*
-  ContactSection Component
+ContactSection Component
 
-  Purpose:
-  - Displays contact info (email, phone, location)
-  - Provides a contact form
-  - Shows toast notification on form submission
+Purpose:
 
-  Interview:
-  Demonstrates form handling + state + user feedback (toast)
+Displays contact details (email, phone, location)
+Provides a contact form for users
+Sends email using EmailJS
+Shows feedback using toast notifications
+
+Interview angle:
+Demonstrates form handling, async operations, state management, and UX feedback
 */
 import { Mail, Phone, Map, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "../hooks/use-toast";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export const ContactSection = () => {
-  // useToast → used to trigger notifications
+  // useToast → used to trigger notifications // Toast hook for success/error notifications
   const { toast } = useToast();
 
-  // State to track form submission (loading state)
+  // State to handle loading state of form submission
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Form submit handler
-  const handleSubmit = (e) => {
-    e.preventDefault(); // prevent page reload
-    setIsSubmitting(true); // show loading state
+  /*
+  Handles form submission:
+  - Prevents default reload
+  - Sends form data using EmailJS
+  - Shows success/error feedback
+  - Resets form after success
+  */
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true); // Start loading
 
-    /*
-      Simulating API call using setTimeout
-      (In real app → this would be backend request)
-    */
-    setTimeout(() => {
-      // Trigger toast notification
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
-      e.target.reset(); // clear form inputs
-      setIsSubmitting(false); //// stop loading
-    }, 1500);
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAIL_SERVICE, // EmailJS service ID
+        import.meta.env.VITE_EMAIL_TEMPLATE, // EmailJS template ID
+        e.target, // Form reference
+        import.meta.env.VITE_EMAIL_PUBLIC, // Public key
+      )
+      .then(
+        () => {
+          // Success toast
+          toast({
+            title: "Message sent!",
+            description: "I'll get back to you soon.",
+          });
+          e.target.reset(); // Clear form fields
+          setIsSubmitting(false); // Stop loading
+        },
+        (error) => {
+          console.error(error); // Debugging (important for production)
+          // Error toast
+          toast({
+            title: "Error",
+            description: "Failed to send message",
+          });
+
+          setIsSubmitting(false); // Stop loading
+        },
+      );
   };
   return (
     /*
-      Section container
-      id used for navbar navigation (#contact)
+    Section container
+    - id="contact" used for navigation scroll
     */
     <section id="contact" className="py-24 px-4 relative bg-background">
       <div className="container mx-auto max-w-5xl">
@@ -54,14 +78,15 @@ export const ContactSection = () => {
         {/* Section description */}
         <p className="text-center text-foreground/80 mb-12 max-w-2xl mx-auto">
           Have a project in mind or want to collaborate? Feel free to reach out.
-          I'm always open to discussing new oppurtunities.
+          I'm always open to discussing new opportunities.
         </p>
-        {/* Grid Layout (Info + Form) */}
+        {/* Layout: Left (info) + Right (form) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* LEFT SIDE → Contact Info */}
+          {/* LEFT SIDE → Contact Information */}
           <div className="space-y-8">
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
             <div className="space-y-6">
+
               {/* Email */}
               <div className="flex items-start ">
                 <div className="p-3 rounded-full bg-primary/10">
@@ -77,6 +102,7 @@ export const ContactSection = () => {
                   </a>
                 </div>
               </div>
+
               {/* Phone */}
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
@@ -92,6 +118,7 @@ export const ContactSection = () => {
                   </a>
                 </div>
               </div>
+
               {/* Location */}
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
@@ -105,6 +132,7 @@ export const ContactSection = () => {
                 </div>
               </div>
             </div>
+
             {/* Social links (optional) */}
             <div className="pt-8">
               <h4 className="font-medium mb-4 text-center">Connect With Me</h4>
@@ -177,6 +205,7 @@ export const ContactSection = () => {
               </div>
             </div>
           </div>
+
           {/* RIGHT SIDE → Contact Form */}
           <div
             className="bg-card 
@@ -185,7 +214,8 @@ export const ContactSection = () => {
   border border-border"
           >
             <h3 className="text-2xl font-semibold mb-6">Send a message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={sendEmail} className="space-y-6">
+              
               {/* Name Input */}
               <div>
                 <label
@@ -196,12 +226,14 @@ export const ContactSection = () => {
                 </label>
                 <input
                   type="text"
+                  name="user_name"
                   id="name"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="Your name..."
                 />
               </div>
+
               {/* Email Input */}
               <div>
                 <label
@@ -212,13 +244,15 @@ export const ContactSection = () => {
                 </label>
                 <input
                   type="email"
+                  name="user_email"
                   id="email"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="...your email"
                 />
               </div>
-              {/* Message Input */}
+        
+              {/* Message input (must match EmailJS template key) */}
               <div>
                 <label
                   htmlFor="message"
@@ -228,6 +262,7 @@ export const ContactSection = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
                   placeholder="Hello, I'd like to talk about..."
@@ -242,8 +277,13 @@ export const ContactSection = () => {
                   "cosmic-button w-full flex items-center justify-center gap-2",
                 )}
               >
-                {isSubmitting ? "Sending..." : "Send Message"}{" "}
-                <Send size={16} />
+                {isSubmitting ? (
+                  <>Sending...</>
+                ) : (
+                  <>
+                    Send Message <Send size={16} />
+                  </>
+                )}
               </button>
             </form>
           </div>
