@@ -18,8 +18,8 @@ const Projects = [
       "This is my personal portfolio website built to showcase my projects, technical skills, and development experience as a frontend-focused full stack developer. The portfolio is designed with a focus on clean UI, responsiveness, and user experience, providing an interactive way to explore my work.",
     image: "/Projects/portfolio2.png",
     tags: ["React.js", "JavaScript", "Tailwind"],
-    demoUrl: "your-vercel-link",
-    githubUrl: "your-github-link",
+    demoUrl: "https://divya-portfolio-steel.vercel.app/",
+    githubUrl: "https://github.com/bholadivya/divya-portfolio.git",
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const Projects = [
       "A full-stack web application that intelligently classifies and prioritizes customer support tickets using rule-based NLP logic.",
     image: "/Projects/ai-ticket-triage.png",
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "JavaScript"],
-    demoUrl: "#",
+    demoUrl: "https://ai-ticket-triage-eight.vercel.app/",
     githubUrl: "https://github.com/bholadivya/AI-Ticket-Triage.git",
   },
 ];
@@ -72,7 +72,7 @@ export const ProjectSection = () => {
                   {project.title}
                 </h3>
                 <p className="text-foreground/80 text-sm md:text-base leading-relaxed line-clamp-3 mb-4">
-                  git add . {project.description}
+                  {project.description}
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3 ">
