@@ -84,7 +84,7 @@ export const ThemeToggle = () => {
         p-2        → padding
         rounded-full → circular button
       */
-        "fixed top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
+        "fixed top-4 right-14 md:right-5 z-50 p-2 rounded-full",
         /*
         Accessibility improvement:
         Removes default browser focus outline
