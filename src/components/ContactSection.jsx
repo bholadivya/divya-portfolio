@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils";
 import { useToast } from "../hooks/use-toast";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { FaLinkedin, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export const ContactSection = () => {
   // useToast → used to trigger notifications // Toast hook for success/error notifications
@@ -86,14 +87,13 @@ export const ContactSection = () => {
           <div className="space-y-8">
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
             <div className="space-y-6">
-
               {/* Email */}
-              <div className="flex items-start ">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />
+              <div className="flex items-center gap-4 ">
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10">
+                  <Mail className="h-5 w-5 text-primary" />
                 </div>
-                <div>
-                  <h4 className="font-medium"> Email </h4>
+                <div className="text-left">
+                  <h4 className="text-sm font-medium"> Email </h4>
                   <a
                     href="mailto:divya.bhola.ug22@nsut.ac.in"
                     className="text-foreground/80 hover:text-primary transition-colors"
@@ -104,12 +104,12 @@ export const ContactSection = () => {
               </div>
 
               {/* Phone */}
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary" />
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10">
+                  <Phone className="h-5 w-5 text-primary" />
                 </div>
-                <div>
-                  <h4 className="font-medium"> Phone </h4>
+                <div className="text-left">
+                  <h4 className="text-sm font-medium"> Phone </h4>
                   <a
                     href="tel:+918595126645"
                     className="text-foreground/80 hover:text-primary transition-colors"
@@ -120,12 +120,12 @@ export const ContactSection = () => {
               </div>
 
               {/* Location */}
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Map className="h-6 w-6 text-primary" />
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10">
+                  <Map className="h-5 w-5 text-primary" />
                 </div>
-                <div>
-                  <h4 className="font-medium"> Location </h4>
+                <div className="text-left">
+                  <h4 className="text-sm font-medium"> Location </h4>
                   <a className="text-foreground/80 hover:text-primary transition-colors">
                     South delhi, New Delhi-110062
                   </a>
@@ -136,31 +136,15 @@ export const ContactSection = () => {
             {/* Social links (optional) */}
             <div className="pt-8">
               <h4 className="font-medium mb-4 text-center">Connect With Me</h4>
-
-              <div className="flex justify-center gap-4">
+              <div className="flex justify-center items-center gap-5">
                 {/* LinkedIn */}
                 <a
                   href="https://www.linkedin.com/in/bholadivya26/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 hover:scale-110 transition-all"
+                  className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 hover:scale-110 transition"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    className="h-5 w-5 fill-current text-primary"
-                  >
-                    <path
-                      d="M19 0h-14c-2.8 0-5 2.2-5 5v14c0 2.8 2.2 5 5 5h14c2.8 0 
-        5-2.2 5-5v-14c0-2.8-2.2-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.3c-1 
-        0-1.8-.8-1.8-1.7s.8-1.7 1.8-1.7 1.8.8 
-        1.8 1.7-.8 1.7-1.8 1.7zm13.5 
-        10.3h-3v-4.5c0-1.1-.4-1.8-1.3-1.8-.7 
-        0-1.1.5-1.3 1-.1.2-.1.5-.1.8v4.5h-3v-9h3v1.2c.4-.6 
-        1.1-1.4 2.7-1.4 2 0 3.5 1.3 
-        3.5 4.1v5.1z"
-                    />
-                  </svg>
+                  <FaLinkedin className="text-primary text-xl" />
                 </a>
 
                 {/* GitHub */}
@@ -168,39 +152,17 @@ export const ContactSection = () => {
                   href="https://github.com/bholadivya"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 hover:scale-110 transition-all"
+                  className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 hover:scale-110 transition"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    className="h-5 w-5 fill-current text-primary"
-                  >
-                    <path
-                      d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 
-        9.38 7.86 10.91.57.1.78-.25.78-.55 
-        0-.27-.01-1.16-.02-2.1-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 
-        1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 
-        3.32.96.1-.74.4-1.25.72-1.53-2.55-.29-5.23-1.27-5.23-5.66 
-        0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.45.11-3.02 
-        0 0 .96-.31 3.15 1.17.91-.25 1.88-.38 
-        2.85-.38.97 0 1.94.13 2.85.38 
-        2.19-1.48 3.15-1.17 3.15-1.17.62 
-        1.57.23 2.73.11 3.02.73.8 1.18 1.82 
-        1.18 3.07 0 4.4-2.69 5.36-5.25 5.65.41.36.77 
-        1.08.77 2.18 0 1.58-.01 2.86-.01 3.25 
-        0 .3.21.66.79.55C20.21 21.38 23.5 17.08 
-        23.5 12 23.5 5.65 18.35.5 12 .5z"
-                    />
-                  </svg>
+                  <FaGithub className="text-primary text-xl" />
                 </a>
 
-                {/* Email */}
+                {/* Instagram (optional) */}
                 <a
-                  href="mailto:divya.bhola.ug22@nsut.ac.in"
-                  target="_blank"
-                  className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 hover:scale-110 transition-all"
+                  href="#"
+                  className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 hover:scale-110 transition"
                 >
-                  <Mail className="h-5 w-5 text-primary" />
+                  <FaInstagram className="text-primary text-xl" />
                 </a>
               </div>
             </div>
@@ -215,7 +177,6 @@ export const ContactSection = () => {
           >
             <h3 className="text-2xl font-semibold mb-6">Send a message</h3>
             <form onSubmit={sendEmail} className="space-y-6">
-              
               {/* Name Input */}
               <div>
                 <label
@@ -251,7 +212,7 @@ export const ContactSection = () => {
                   placeholder="...your email"
                 />
               </div>
-        
+
               {/* Message input (must match EmailJS template key) */}
               <div>
                 <label
