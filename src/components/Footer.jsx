@@ -29,7 +29,7 @@ export const Footer = () => {
           transition-all duration-300
         "
       >
-        <ArrowUp size={18} />
+        <ArrowUp size={20} />
       </a>
     </footer>
   );

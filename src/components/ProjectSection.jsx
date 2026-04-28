@@ -5,7 +5,7 @@ const Projects = [
     id: 1,
     title: "ERP Portal for ECE Department",
     description:
-      "A full-stack ERP system with role-based dashboards for students, professors, and admins. Features authentication, workflow management, and AI-powered chatbot integration.",
+      "A full-stack web application designed to manage the Bachelor Thesis Project (BTP) workflow for students, professors, and administrators.",
     image: "/Projects/ERP.png",
     tags: ["React", "Tailwind", "Node.js", "MongoDB", "JWT"],
     demoUrl: "https://btp-project-kohl.vercel.app/login",
@@ -15,7 +15,7 @@ const Projects = [
     id: 2,
     title: "Personal Portfolio Website",
     description:
-      "Developed a responsive portfolio using React to showcase projects, skills, and experience. Implemented dynamic project rendering, routing, and clean UI design for better presentation.",
+      "This is my personal portfolio website built to showcase my projects, technical skills, and development experience as a frontend-focused full stack developer. The portfolio is designed with a focus on clean UI, responsiveness, and user experience, providing an interactive way to explore my work.",
     image: "/Projects/portfolio2.png",
     tags: ["React.js", "JavaScript", "Tailwind"],
     demoUrl: "your-vercel-link",
@@ -25,7 +25,7 @@ const Projects = [
     id: 3,
     title: "AI-Powered Support Ticket Triage System",
     description:
-      "Built a full-stack MERN application that classifies support tickets using rule-based NLP into categories like Billing, Technical, and Account, and assigns priorities (P0–P3) based on urgency. Implemented a custom security rule to escalate critical issues and stored ticket history using MongoDB.",
+      "A full-stack web application that intelligently classifies and prioritizes customer support tickets using rule-based NLP logic.",
     image: "/Projects/ai-ticket-triage.png",
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "JavaScript"],
     demoUrl: "#",
@@ -68,9 +68,11 @@ export const ProjectSection = () => {
                     </span>
                   ))}
                 </div>
-                <h3 className="text-xl md:text-2xl font-semibold mb-1">{project.title}</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-1">
+                  {project.title}
+                </h3>
                 <p className="text-foreground/80 text-sm md:text-base leading-relaxed line-clamp-3 mb-4">
-                  {project.description}
+                  git add . {project.description}
                 </p>
                 <div className="flex justify-between items-center">
                   <div className="flex space-x-3 ">
