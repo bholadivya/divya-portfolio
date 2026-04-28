@@ -2,7 +2,7 @@
 
 ## 🔗 Links
 
-- 🌐 **Live Demo:** https://your-portfolio-link.vercel.app  
+- 🌐 **Live Demo:** https://divya-portfolio-steel.vercel.app/
 - 💻 **GitHub Repo:** https://github.com/bholadivya/divya-portfolio.git
 
 ---
