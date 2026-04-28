@@ -169,6 +169,7 @@ export const ContactSection = () => {
                 {/* Email */}
                 <a
                   href="mailto:divya.bhola.ug22@nsut.ac.in"
+                  target="_blank"
                   className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 hover:scale-110 transition-all"
                 >
                   <Mail className="h-5 w-5 text-primary" />
