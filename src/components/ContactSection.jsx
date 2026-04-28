@@ -112,7 +112,7 @@ export const ContactSection = () => {
               <div className="flex justify-center gap-4">
                 {/* LinkedIn */}
                 <a
-                  href="https://linkedin.com/in/YOUR-LINKEDIN"
+                  href="https://www.linkedin.com/in/bholadivya26/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 hover:scale-110 transition-all"
