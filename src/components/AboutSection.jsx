@@ -17,7 +17,7 @@ export const AboutSection = () => {
       {/* Container for centered content */}
       <div className="container mx-auto max-w-5xl">
         {/* Section heading */}
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
           About <span className="text-primary">Me</span>
         </h2>
         {/* Two-column layout */}
@@ -25,24 +25,24 @@ export const AboutSection = () => {
           {/* LEFT: Text content */}
           <div className="space-y-6">
             {/* Title */}
-            <h3 className="text-2xl font-semibold">
+            <h3 className="text-2xl md:text-3xl font-semibold">
               Frontend-Focused Full Stack Developer (SDE)
             </h3>
             {/* Description */}
-            <p className="text-foreground/80">
+            <p className="text-foreground/80 text-base md:text-lg leading-relaxed max-w-xl">
               I’m a frontend-focused full stack developer passionate about
               building clean, responsive, and user-centric web applications. I
               enjoy turning ideas into seamless digital experiences using modern
               technologies like React, JavaScript, Node.js, and MongoDB.
             </p>
-            <p className="text-foreground/80">
+            <p className="text-foreground/80 text-base md:text-lg leading-relaxed max-w-xl">
               With hands-on experience in building end-to-end web applications,
               I’ve worked on projects involving role-based dashboards, API
               integration, authentication systems, and responsive UI design. I
               focus on writing scalable code, optimizing performance, and
               delivering intuitive user experiences.
             </p>
-            <p className="text-foreground/80">
+            <p className="text-foreground/80 text-base md:text-lg leading-relaxed max-w-xl">
               I’m constantly learning, exploring new technologies, and improving
               my problem-solving skills through DSA and real-world projects. My
               goal is to grow as a software developer while building impactful
@@ -74,8 +74,8 @@ export const AboutSection = () => {
                 </div>
                 {/* Content */}
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Web Development</h4>
-                  <p className="text-foreground/80">
+                  <h4 className="font-semibold text-lg md:text-xl font-semibold">Web Development</h4>
+                  <p className="text-foreground/80 text-sm md:text-base leading-relaxed">
                     I build responsive and scalable web applications using
                     modern technologies like React, JavaScript, and Node.js. I
                     focus on clean architecture, reusable components, and
@@ -92,8 +92,8 @@ export const AboutSection = () => {
                   <User className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">User-Centric Design</h4>
-                  <p className="text-foreground/80">
+                  <h4 className="font-semibold text-lg md:text-xl font-semibold">User-Centric Design</h4>
+                  <p className="text-foreground/80 text-sm md:text-base leading-relaxed">
                     I prioritize intuitive UI/UX by designing interfaces that
                     are simple, accessible, and engaging. My goal is to create
                     seamless user experiences that balance functionality with
@@ -109,8 +109,8 @@ export const AboutSection = () => {
                   <Briefcase className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Full Stack Development</h4>
-                  <p className="text-foreground/80">
+                  <h4 className="font-semibold text-lg md:text-xl font-semibold">Full Stack Development</h4>
+                  <p className="text-foreground/80 text-sm md:text-base leading-relaxed">
                     I have experience building end-to-end applications,
                     including backend APIs, authentication systems, and database
                     integration using Node.js and MongoDB. I enjoy working

@@ -38,7 +38,7 @@ export const HeroSection = () => {
             </span>
           </h1>
           {/* Description */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
+          <p className="text-base md:text-lg leading-relaxed max-w-2xl mx-auto text-foreground/80 max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
             I’m a frontend-focused full stack developer (SDE) passionate about
             building clean, responsive, and user-centric web applications. I
             enjoy creating seamless digital experiences using React and modern
@@ -46,7 +46,7 @@ export const HeroSection = () => {
           </p>
           {/* CTA Button */}
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-            <a href="#Projects" className="cosmic-button">
+            <a href="#projects" className="cosmic-button">
               View My Work
             </a>
           </div>

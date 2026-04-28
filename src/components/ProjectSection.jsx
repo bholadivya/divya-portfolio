@@ -37,10 +37,10 @@ export const ProjectSection = () => {
   return (
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
           Featured <span className="text-primary">Projects</span>
         </h2>
-        <p className="text-center text-foreground/80 mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-foreground/80 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-12">
           Here are some of my recent projects. Each project was carefully
           crafted with attention to detail, performance, and user experience.
         </p>
@@ -68,8 +68,8 @@ export const ProjectSection = () => {
                     </span>
                   ))}
                 </div>
-                <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-                <p className="text-foreground/80 text-sm mb-4">
+                <h3 className="text-xl md:text-2xl font-semibold mb-1">{project.title}</h3>
+                <p className="text-foreground/80 text-sm md:text-base leading-relaxed line-clamp-3 mb-4">
                   {project.description}
                 </p>
                 <div className="flex justify-between items-center">
