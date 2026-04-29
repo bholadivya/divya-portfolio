@@ -11,8 +11,45 @@
 */
 
 import { ArrowDown } from "lucide-react";
+import { useEffect, useState } from "react";
+
+const roles = [
+  "Crafting interfaces that feel alive.",
+  "Breaking systems. Building better ones.",
+  "From concept to click — I build it all.",
+  "Secure by design. Fast by default.",
+];
 
 export const HeroSection = () => {
+  const [index, setIndex] = useState(0);
+  const [text, setText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const current = roles[index];
+    let speed = isDeleting ? 40 : 80;
+
+    const timer = setTimeout(() => {
+      if (!isDeleting) {
+        setText(current.substring(0, text.length + 1));
+
+        if (text === current) {
+          setIsDeleting(true);
+          speed = 1200; // pause before deleting
+        }
+      } else {
+        setText(current.substring(0, text.length - 1));
+
+        if (text === "") {
+          setIsDeleting(false);
+          setIndex((prev) => (prev + 1) % roles.length);
+        }
+      }
+    }, speed);
+
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, index]);
+
   return (
     /*
       Full screen hero section
@@ -20,34 +57,79 @@ export const HeroSection = () => {
     */
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-4"
+      className="min-h-screen flex flex-col items-center justify-start sm:justify-center pt-60 sm:pt-0"
     >
-      <div className="container max-w-4xl mx-auto text-center z-10">
-        <div className="space-y-6">
+      {/* 🔥 ACTIVE STATUS */}
+      <div className="mb-6">
+        <div className="mb-6 flex items-center justify-center gap-3 neon-pill px-4 py-1.5">
+          <span className="relative flex h-3 w-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+          </span>
+
+          <span className="text-xl font-medium tracking-wide">
+            Open to Innovative Ideas
+          </span>
+        </div>
+      </div>
+      <div className="container w-full flex flex-col items-center justify-center text-center z-10 ">
+        <div className="space-y-0">
           {/* Heading */}
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-            {/* Animated intro text */}
-            <span className="opacity-0 animate-fade-in">Hi, I'm </span>
-            {/* Name (highlighted) */}
-            <span className="text-primary opacity-0 animate-fade-in-delay-1">
-              Divya
-            </span>
-            {/* Last name with gradient */}
-            <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
-              Bhola
-            </span>
-          </h1>
-          {/* Description */}
-          <p className="text-base md:text-lg leading-relaxed max-w-2xl mx-auto text-foreground/80 max-w-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            I’m a frontend-focused full stack developer (SDE) passionate about
-            building clean, responsive, and user-centric web applications. I
-            enjoy creating seamless digital experiences using React and modern
-            web technologies.
+
+          {/* Line 1 */}
+          <p className="text-lg md:text-4xl text-muted-foreground tracking-wide opacity-0 animate-fade-in">
+            Hi, I’m
+          </p>
+          {/* Name highlighted */}
+          <div className="space-y-3 leading-[0.85]">
+            <h1
+              className="
+  text-[18vw] 
+  sm:text-[14vw] 
+  md:text-[12vw] 
+  lg:text-[10vw]
+  font-black leading-[0.9] tracking-[-2px] 
+  text-primary
+  -mb-4 sm:-mb-6 md:-mb-8
+"
+            >
+              DIVYA
+            </h1>
+
+            <h1
+              className="
+  text-[18vw] 
+  sm:text-[14vw] 
+  md:text-[12vw] 
+  lg:text-[10vw]
+  font-black leading-[0.9] tracking-[-2px]
+  bg-gradient-to-b from-white via-white/80 to-white/20 
+  bg-clip-text text-transparent
+"
+            >
+              BHOLA
+            </h1>
+          </div>
+
+          {/* TYPEWRITER */}
+          <p
+            className="mt-8 md:mt-12 h-12 flex items-center justify-center text-xl md:text-4xl neon-glow font-medium text-primary/80 italic tracking-wide"
+            style={{ fontFamily: "Fira Code" }}
+          >
+            {text}
+            <span className="ml-1 animate-pulse">|</span>
           </p>
           {/* CTA Button */}
-          <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-            <a href="#projects" className="cosmic-button">
-              View My Work
+          <div className="mt-10 md:mt-14 opacity-0 animate-fade-in-delay-4">
+            <a
+              href="#projects"
+              className="
+    cosmic-button 
+    text-base sm:text-lg md:text-xl 
+    px-6 py-2 sm:px-8 sm:py-3
+  "
+            >
+              View My Work →
             </a>
           </div>
         </div>
