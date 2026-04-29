@@ -25,14 +25,14 @@ const navItems = [
 ];
 
 export const Navbar = () => {
-    /*
+  /*
     isScrolled → tracks if user scrolled down
     isMenuOpen → controls mobile menu visibility
     */
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Adds scroll listener to update navbar style 
+  // Adds scroll listener to update navbar style
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -57,27 +57,22 @@ export const Navbar = () => {
       )}
     >
       <div className="container flex items-center justify-between">
-        {/* Logo / Brand */}
-        <a
-          className="text-xl font-bold text-primary flex items-center"
-          href="#hero"
-        >
-          <span className="relative z-10">
-            <span className="text-glow text-foreground">Divya Bhola</span>{" "}
-            Portfolio
-          </span>
-        </a>
+        <div className="flex items-center gap-2">
+          <img src="/logo.PNG" alt="logo" className="h-20 w-20 object-contain" />
+          <span className=" text-primary font-bold text-4xl">Portfolio</span>
+        </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8 flex-wrap">
+        <div className="hidden md:flex items-center gap-10">
           {navItems.map((item, key) => (
             <a
               key={key}
               href={item.href}
-              className="relative text-base font-semibold text-foreground/80 hover:text-primary transition-all duration-300 group"
+              className="relative text-lg font-semibold text-foreground/80 hover:text-white transition-all duration-300 group"
             >
               {item.name}
-               <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
+              {/* glow underline */}
+              <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
         </div>
