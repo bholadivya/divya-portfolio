@@ -17,10 +17,10 @@ import { Menu, X } from "lucide-react";
   Each item links to a section using anchor IDs
 */
 const navItems = [
-  { name: "Home", href: "#hero" },
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
+  { name: "Career", href: "#career" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -69,14 +69,15 @@ export const Navbar = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex items-center gap-8 flex-wrap">
           {navItems.map((item, key) => (
             <a
               key={key}
               href={item.href}
-              className="text-sm md:text-base font-medium text-foreground/80 hover:text-primary transition-colors duration-300"
+              className="relative text-base font-semibold text-foreground/80 hover:text-primary transition-all duration-300 group"
             >
               {item.name}
+               <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
         </div>
