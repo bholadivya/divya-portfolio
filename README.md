@@ -65,6 +65,8 @@ The portfolio is designed with a strong emphasis on **clean UI, smooth interacti
   <img src="./public/screenshots/home.png" width="80%" />
   <img src="./public/screenshots/about.png" width="80%" />
   <img src="./public/screenshots/skills.png" width="80%" />
+  <img src="./public/screenshots/education.png" width="80%" />
+  <img src="./public/screenshots/experience.png" width="80%" />
   <img src="./public/screenshots/projects.png" width="80%" />
   <img src="./public/screenshots/contact.png" width="80%" />
 </p>
