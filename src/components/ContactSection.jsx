@@ -156,14 +156,6 @@ export const ContactSection = () => {
                 >
                   <FaGithub className="text-primary text-xl" />
                 </a>
-
-                {/* Instagram (optional) */}
-                <a
-                  href="#"
-                  className="w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 hover:scale-110 transition"
-                >
-                  <FaInstagram className="text-primary text-xl" />
-                </a>
               </div>
             </div>
           </div>
