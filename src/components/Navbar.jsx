@@ -56,9 +56,17 @@ export const Navbar = () => {
           : "py-5",
       )}
     >
-      <div className="container flex items-center justify-between">
+      <div className="w-full max-w-7xl mx-auto px-6 flex items-center justify-between relative">
         <div className="flex items-center gap-2">
-          <img src="/logo.PNG" alt="logo" className="h-20 w-20 object-contain" />
+          <img
+  src="/logo-light.png"   // light-friendly logo
+  className="block dark:hidden h-10 w-10"
+/>
+
+<img
+  src="/logo.png"         // dark logo
+  className="hidden dark:block h-10 w-10"
+/>
           <span className=" text-primary font-bold text-4xl">Portfolio</span>
         </div>
 
@@ -68,7 +76,7 @@ export const Navbar = () => {
             <a
               key={key}
               href={item.href}
-              className="relative text-lg font-semibold text-foreground/80 hover:text-white transition-all duration-300 group"
+              className="relative text-lg font-semibold text-foreground/80 hover:text-whitetransition-all duration-300 group"
             >
               {item.name}
               {/* glow underline */}
@@ -89,7 +97,7 @@ export const Navbar = () => {
         <div
           className={cn(
             "fixed inset-0 bg-background/95 backdrop-blue-md z-40 flex flex-col items-center justify-center",
-            "transition-all duration-300 md-hidden",
+            "bg-background/95 backdrop-blur-md",
             isMenuOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none",

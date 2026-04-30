@@ -57,7 +57,7 @@ export const HeroSection = () => {
     */
     <section
       id="hero"
-      className="min-h-screen flex flex-col items-center justify-start sm:justify-center pt-60 sm:pt-0"
+      className="min-h-screen flex flex-col items-center justify-start sm:justify-center pt-24 sm:pt-0"
     >
       {/* 🔥 ACTIVE STATUS */}
       <div className="mb-6">
@@ -84,13 +84,10 @@ export const HeroSection = () => {
           <div className="space-y-3 leading-[0.85]">
             <h1
               className="
-  text-[18vw] 
-  sm:text-[14vw] 
-  md:text-[12vw] 
-  lg:text-[10vw]
-  font-black leading-[0.9] tracking-[-2px] 
-  text-primary
-  -mb-4 sm:-mb-6 md:-mb-8
+  text-[16vw] md:text-[12vw] font-black leading-[0.85] tracking-[-4px]
+  text-foreground 
+  dark:text-primary 
+  -mb-6 md:-mb-10
 "
             >
               DIVYA
@@ -98,12 +95,14 @@ export const HeroSection = () => {
 
             <h1
               className="
-  text-[18vw] 
-  sm:text-[14vw] 
-  md:text-[12vw] 
-  lg:text-[10vw]
-  font-black leading-[0.9] tracking-[-2px]
-  bg-gradient-to-b from-white via-white/80 to-white/20 
+  text-[16vw] md:text-[12vw] font-black leading-[0.85] tracking-[-4px]
+  bg-gradient-to-b 
+  from-foreground 
+  via-foreground/70 
+  to-foreground/20
+  dark:from-white 
+  dark:via-white/80 
+  dark:to-white/20
   bg-clip-text text-transparent
 "
             >
@@ -113,7 +112,7 @@ export const HeroSection = () => {
 
           {/* TYPEWRITER */}
           <p
-            className="mt-8 md:mt-12 h-12 flex items-center justify-center text-xl md:text-4xl neon-glow font-medium text-primary/80 italic tracking-wide"
+            className="mt-8 md:mt-12 h-12 flex items-center justify-center text-xl md:text-4xl neon-glow font-medium italic tracking-wide"
             style={{ fontFamily: "Fira Code" }}
           >
             {text}
