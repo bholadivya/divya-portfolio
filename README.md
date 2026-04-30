@@ -1,46 +1,61 @@
 # 🌐 Personal Portfolio Website
 
-## 🔗 Links
+## 🔗 Live Links
 
-- 🌐 **Live Demo:** https://divya-portfolio-steel.vercel.app/
-- 💻 **GitHub Repo:** https://github.com/bholadivya/divya-portfolio.git
+- 🚀 **Live Demo:** https://divya-portfolio-steel.vercel.app/
+- 💻 **GitHub Repository:** https://github.com/bholadivya/divya-portfolio.git
 
 ---
 
-## 📌 Overview
+## ✨ Overview
 
-This is my personal portfolio website built to showcase my projects, technical skills, and development experience as a frontend-focused full stack developer.
+This is my personal portfolio website built to showcase my work, technical skills, and development journey as a **frontend-focused full stack developer**.
 
-The portfolio is designed with a focus on **clean UI, responsiveness, and user experience**, providing an interactive way to explore my work.
+The portfolio is designed with a strong emphasis on **clean UI, smooth interactions, and performance**, creating a seamless and engaging user experience.
 
 ---
 
 ## 🚀 Features
 
-- 🌙 Dark mode toggle  
-- ✨ Animated UI (stars background, fade-in effects)  
-- 📂 Project showcase  
-- 🧠 Skills filtering system  
-- 📬 Contact section for user interaction  
-- 📱 Fully responsive design  
+- 🌌 **Dynamic UI Experience**  
+  Animated star background, smooth transitions, and subtle micro-interactions
+
+- 🧩 **Modular Architecture**  
+  Reusable components for scalability and maintainability
+
+- 📂 **Project Showcase**  
+  Highlighted projects with live demos and GitHub links
+
+- 🧠 **Interactive Skills Section**  
+  Category-based filtering with real tech icons
+
+- 🛤 **Career Journey Section**  
+  Structured representation of experience, education, and achievements
+
+- 📱 **Fully Responsive Design**  
+  Optimized across all screen sizes
+
 ---
 
 ## 🧩 Tech Stack
 
-**Frontend:** React (Vite), Tailwind CSS
+**Frontend:**  
+- React (Vite)  
+- Tailwind CSS  
 
-**Libraries:** React Router, Lucide Icons
-
-**Utilities:** clsx, tailwind-merge
+**Libraries & Tools:**  
+- Lucide React  
+- React Icons  
+- clsx + tailwind-merge  
 
 ---
 
 ## 💡 Key Highlights
 
-* Built reusable UI components for scalability
-* Implemented modern design patterns and animations
-* Optimized layout for responsiveness across devices
-* Focused on clean, minimal, and user-friendly interface
+- Designed with a **minimal yet visually engaging UI**
+- Implemented **custom animations and glowing UI effects**
+- Built with **component-driven architecture**
+- Focused on **performance, responsiveness, and clean code practices**
 
 ---
 
@@ -53,35 +68,36 @@ The portfolio is designed with a focus on **clean UI, responsiveness, and user e
   <img src="./public/screenshots/projects.png" width="80%" />
   <img src="./public/screenshots/contact.png" width="80%" />
 </p>
+
 ---
 
-## ⚙️ Installation
+## ⚙️ Installation & Setup
 
 ```bash
-git clone (https://github.com/bholadivya/divya-portfolio.git)
+git clone https://github.com/bholadivya/divya-portfolio.git
+cd divya-portfolio
 npm install
 npm run dev
 ```
 
----
-
-## 🌐 Deployment
+## 🌐 Deployment 
 
 * Hosted on Vercel
 * Optimized for fast loading and performance
 
 ---
 
-## 🚀 Future Enhancements
+## 🚀 Future Enhancements 
 
 * Contact form with backend integration
 * Blog section
 * More interactive animations
 * Performance optimizations
 
----
+--- 
 
-## 👨‍💻 Author
+## 👨‍💻 Author 
 
-**Divya Bhola**  
+**Divya Bhola** 
+
 Frontend-Focused Full Stack Developer
