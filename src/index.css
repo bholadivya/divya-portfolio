@@ -213,6 +213,9 @@ h3 {
     0 0 40px hsl(var(--primary));
 }
 @utility neon-pill {
+   border: 1px solid rgba(120, 140, 255, 0.15);
+  background: rgba(120, 140, 255, 0.04);
+  box-shadow: none;
   animation: glowPulse 2.5s ease-in-out infinite;
 }
 /* Reusable hover effect for project cards */

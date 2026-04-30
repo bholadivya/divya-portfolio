@@ -57,22 +57,22 @@ export const HeroSection = () => {
     */
     <section
       id="hero"
-      className="min-h-screen flex flex-col items-center justify-start sm:justify-center pt-24 sm:pt-0"
+      className="relative min-h-screen flex flex-col items-center justify-start sm:justify-center pt-24 sm:pt-0"
     >
       {/* 🔥 ACTIVE STATUS */}
       <div className="mb-6">
-        <div className="mb-6 flex items-center justify-center gap-3 neon-pill px-4 py-1.5">
+        <div className="mb-6 flex items-center justify-center gap-3 neon-pill px-4 py-1.5 rounded-full">
           <span className="relative flex h-3 w-3">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
           </span>
 
-          <span className="text-xl font-medium tracking-wide">
+          <span className="text-sm md:text-base font-medium tracking-wide">
             Open to Innovative Ideas
           </span>
         </div>
       </div>
-      <div className="container w-full flex flex-col items-center justify-center text-center z-10 ">
+      <div className="w-full flex flex-col items-center justify-center text-center z-10">
         <div className="space-y-0">
           {/* Heading */}
 
@@ -84,10 +84,11 @@ export const HeroSection = () => {
           <div className="space-y-3 leading-[0.85]">
             <h1
               className="
-  text-[16vw] md:text-[12vw] font-black leading-[0.85] tracking-[-4px]
+  text-[14vw] md:text-[10vw] font-black leading-[0.85] tracking-[-4px]
   text-foreground 
   dark:text-primary 
   -mb-6 md:-mb-10
+  animate-fade-in-delay-1
 "
             >
               DIVYA
@@ -95,7 +96,7 @@ export const HeroSection = () => {
 
             <h1
               className="
-  text-[16vw] md:text-[12vw] font-black leading-[0.85] tracking-[-4px]
+  text-[14vw] md:text-[10vw] font-black leading-[0.85] tracking-[-4px]
   bg-gradient-to-b 
   from-foreground 
   via-foreground/70 
@@ -104,6 +105,7 @@ export const HeroSection = () => {
   dark:via-white/80 
   dark:to-white/20
   bg-clip-text text-transparent
+  animate-fade-in-delay-2
 "
             >
               BHOLA
@@ -112,7 +114,7 @@ export const HeroSection = () => {
 
           {/* TYPEWRITER */}
           <p
-            className="mt-8 md:mt-12 h-12 flex items-center justify-center text-xl md:text-4xl neon-glow font-medium italic tracking-wide"
+            className="mt-8 md:mt-12 h-12 flex items-center justify-center text-lg sm:text-xl md:text-2xl neon-glow font-medium italic tracking-wide"
             style={{ fontFamily: "Fira Code" }}
           >
             {text}
@@ -133,11 +135,11 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-        <span className="text-sm text-foreground/80 mb-2">Scroll</span>
-        <ArrowDown className="h-5 w-5 text-primary" />
-      </div>
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+          <span className="text-sm text-foreground/60 mb-2">Scroll</span>
+          <ArrowDown className="h-5 w-5 text-primary" />
+        </div>
     </section>
   );
 };

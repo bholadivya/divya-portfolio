@@ -58,15 +58,16 @@ export const Navbar = () => {
     >
       <div className="w-full max-w-7xl mx-auto px-6 flex items-center justify-between relative">
         <div className="flex items-center gap-2">
-          <img
+          {/* <img
   src="/logo-light.png"   // light-friendly logo
   className="block dark:hidden h-10 w-10"
-/>
+/> */}
 
-<img
+          {/* <img
   src="/logo.png"         // dark logo
   className="hidden dark:block h-10 w-10"
-/>
+/> */}
+<span className="font-bold text-4xl md:text-4xl">DB</span>
           <span className=" text-primary font-bold text-4xl">Portfolio</span>
         </div>
 
