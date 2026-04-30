@@ -12,10 +12,9 @@ import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
 
 export const Home = () => {
-
   return (
     <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* Theme Toggle => by default dark mode kardia*/} 
+      {/* Theme Toggle => by default dark mode kardia*/}
       {/* <ThemeToggle /> */}
       {/* BackGround Effects */}
       <StarBackground />
@@ -27,10 +26,20 @@ export const Home = () => {
         <AboutSection />
         <SkillsSection />
         <ProjectSection />
-        <section id="career">
-          <ExperienceSection />
-          <EducationSection />
-          <AchievementSection />
+        <section id="career" className="py-24 px-4 relative">
+          <div className="container mx-auto max-w-5xl">
+            {/* Section Title */}
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+              Career <span className="text-primary">Journey</span>
+            </h2>
+
+            {/* Sections */}
+            <div className="space-y-20">
+              <ExperienceSection />
+              <EducationSection />
+              <AchievementSection />
+            </div>
+          </div>
         </section>
         <ContactSection />
       </main>

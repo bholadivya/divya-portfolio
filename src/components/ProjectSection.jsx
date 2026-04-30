@@ -17,7 +17,7 @@ const Projects = [
     title: "Personal Portfolio Website",
     description:
       "This is my personal portfolio website built to showcase my projects, technical skills, and development experience as a frontend-focused full stack developer. The portfolio is designed with a focus on clean UI, responsiveness, and user experience, providing an interactive way to explore my work.",
-    image: "/Projects/portfolio2.png",
+    image: "/Projects/final.png",
     tags: ["React.js", "JavaScript", "Tailwind"],
     demoUrl: "https://divya-portfolio-steel.vercel.app/",
     githubUrl: "https://github.com/bholadivya/divya-portfolio.git",
@@ -36,7 +36,7 @@ const Projects = [
 
 export const ProjectSection = () => {
   return (
-    <section id="projects" className="py-24 px-4 relative">
+    <section id="projects" className="py-24 px-4 relative ">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
           Featured <span className="text-primary">Projects</span>
@@ -49,7 +49,7 @@ export const ProjectSection = () => {
           {Projects.map((project, key) => (
             <div
               key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              className="group neon-pill relative bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
               <div className="h-48 overflow-hidden">
                 <img
