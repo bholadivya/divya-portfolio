@@ -81,32 +81,31 @@ export const HeroSection = () => {
             Hi, I’m
           </p>
           {/* Name highlighted */}
-          <div className="space-y-3 leading-[0.85]">
+          <div className="leading-[0.9] sm:leading-[0.85]">
             <h1
               className="
-  text-[14vw] md:text-[10vw] font-black leading-[0.85] tracking-[-4px]
-  text-foreground 
-  dark:text-primary 
-  -mb-6 md:-mb-10
-  animate-fade-in-delay-1
-"
+      text-[14vw] md:text-[10vw] font-black tracking-[-2px] md:tracking-[-4px]
+      text-foreground 
+      dark:text-primary 
+    "
             >
               DIVYA
             </h1>
 
             <h1
               className="
-  text-[14vw] md:text-[10vw] font-black leading-[0.85] tracking-[-4px]
-  bg-gradient-to-b 
-  from-foreground 
-  via-foreground/70 
-  to-foreground/20
-  dark:from-white 
-  dark:via-white/80 
-  dark:to-white/20
-  bg-clip-text text-transparent
-  animate-fade-in-delay-2
-"
+      text-[14vw] md:text-[10vw] font-black tracking-[-2px] md:tracking-[-4px]
+      bg-gradient-to-b 
+      from-foreground 
+      via-foreground/70 
+      to-foreground/20
+      dark:from-white 
+      dark:via-white/80 
+      dark:to-white/20
+      bg-clip-text text-transparent
+
+      mt-[-8px] sm:mt-[-12px] md:mt-[-20px]
+    "
             >
               BHOLA
             </h1>
@@ -135,11 +134,11 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-          <span className="text-sm text-foreground/60 mb-2">Scroll</span>
-          <ArrowDown className="h-5 w-5 text-primary" />
-        </div>
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+        <span className="text-sm text-foreground/60 mb-2">Scroll</span>
+        <ArrowDown className="h-5 w-5 text-primary" />
+      </div>
     </section>
   );
 };
