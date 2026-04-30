@@ -35,8 +35,8 @@ export const Home = () => {
 
             {/* Sections */}
             <div className="space-y-20">
-              <ExperienceSection />
               <EducationSection />
+              <ExperienceSection />
               <AchievementSection />
             </div>
           </div>
