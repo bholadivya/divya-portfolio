@@ -51,6 +51,11 @@ export const ProjectSection = () => {
               key={key}
               className="group relative bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
+              {/* 🔥 Top Glow Line */}
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 opacity-80" />
+
+              {/* 🔥 Soft Glow Spread */}
+              <div className="absolute top-0 left-0 w-full h-6 bg-gradient-to-r from-purple-500/20 via-indigo-500/20 to-cyan-500/20 blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="h-48 overflow-hidden">
                 <img
                   src={project.image}
